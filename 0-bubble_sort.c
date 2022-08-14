@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - this function performs the
+ * swap_int - this function performs the
  * swapping of places in the algorithm
  *
  * @x: first integer
@@ -9,7 +9,7 @@
  * @y: second integer
  */
 
-void swap(int *x, int *y)
+void swap_int(int *x, int *y)
 {
 	int temp;
 
@@ -43,7 +43,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				swap(&array[j], &array[j + 1]);
+				swap_int(&array[j], &array[j + 1]);
 				swapped = true;
 			}
 		}
