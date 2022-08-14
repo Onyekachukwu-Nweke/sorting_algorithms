@@ -31,26 +31,28 @@ void swap_int(int *x, int *y)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j, len;
-	bool swapped;
+	int swapped;
+
+	if (!array || size < 2)
+		return;
 
 	len = size;
-
 	for (i = 0; i < size - 1; i++)
 	{
-		swapped = false;
+		swapped = 0;
 		/** Last i elements are already in place **/
 		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
 				swap_int(&array[j], &array[j + 1]);
-				swapped = true;
+				swapped = 1;
 			}
 		}
 		print_array(array, len);
 
 		/**IF no element is swapped in the inner loop**/
-		if (swapped == false)
+		if (swapped == 0)
 			break;
 	}
 }
