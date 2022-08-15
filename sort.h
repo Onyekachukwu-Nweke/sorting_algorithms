@@ -30,10 +30,7 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 
-<<<<<<< HEAD
 void recall_sort(int *array, size_t size, int low, int high);
 size_t partition(int *array, size_t size, int low, int high);
 void swap_num(int *array, size_t size, int a, int b);
-=======
->>>>>>> 83027c01f1bf84a4dae02cde88a3794816d9573e
 #endif
