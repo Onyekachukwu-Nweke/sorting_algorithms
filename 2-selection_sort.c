@@ -20,7 +20,7 @@ void swap_int(int *x, int *y)
 
 /**
  * selection_sort - this function implements
- * the bubble sort algorithm
+ * the selection sort algorithm
  *
  * @array: the array to be sorted
  *
@@ -45,8 +45,7 @@ void selection_sort(int *array, size_t size)
 		if (min_idx != i)
 		{
 			swap_int(&array[i], &array[min_idx]);
+			print_array(array, size);
 		}
-
-		print_array(array, size);
 	}
 }

@@ -47,9 +47,9 @@ void bubble_sort(int *array, size_t size)
 			{
 				swap_int(&array[j], &array[j + 1]);
 				swapped = 1;
+				print_array(array, len);
 			}
 		}
-		print_array(array, len);
 
 		/**IF no element is swapped in the inner loop**/
 		if (swapped == 0)
