@@ -68,8 +68,11 @@ void swap_num(int *array, size_t size, int a, int b)
 {
 	int tmp;
 
-	tmp = array[a];
-	array[a] = array[b];
-	array[b] = tmp;
-	print_array(array, size);
+	if (array[a] != array[b])
+	{
+		tmp = array[a];
+		array[a] = array[b];
+		array[b] = tmp;
+		print_array(array, size);
+	}
 }
