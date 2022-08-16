@@ -7,6 +7,8 @@
  */
 void quick_sort(int *array, size_t size)
 {
+	if (!array || size < 2)
+		return;
 	recall_sort(array, size, 0, size - 1);
 }
 
@@ -40,11 +42,10 @@ void recall_sort(int *array, size_t size, int low, int high)
  */
 size_t partition(int *array, size_t size, int low, int high)
 {
-	int pivot = array[high];
-	int i = (low - 1);
-	int j;
+	int i, j, pivot = array[high];
 
-	for (j = low; j <= high - 1; j++)
+	i = low - 1;
+	for (j = low; j <= high; j++)
 	{
 		if (array[j] < pivot)
 		{
