@@ -12,6 +12,8 @@ void quick_sort(int *array, size_t size)
 
 /**
  * recall_sort - recall function
+ * @array: list of numbers
+ * @size: size of list
  * @low: least index
  * @high: max index
  */
@@ -30,8 +32,11 @@ void recall_sort(int *array, size_t size, int low, int high)
 /**
  * partition - partitions for sorting
  * @array: list of numbers
+ * @size: size of array
  * @low: low value
  * @high: high value
+ *
+ * Return: the pivot
  */
 size_t partition(int *array, size_t size, int low, int high)
 {
@@ -45,23 +50,23 @@ size_t partition(int *array, size_t size, int low, int high)
 		{
 			i++;
 			swap_num(array, size, i, j);
-			/*print_array(array, size);*/
 		}
 	}
 	swap_num(array, size, i + 1, high);
-	/*print_array(array, size);*/
 	return (i + 1);
 }
 
 /**
  * swap_num - swap two number
  * @array: list of numbers
- * @low: first index
- * @high: second index
+ * @size: size of array
+ * @a: first index
+ * @b: second index
  */
 void swap_num(int *array, size_t size, int a, int b)
 {
 	int tmp;
+
 	tmp = array[a];
 	array[a] = array[b];
 	array[b] = tmp;
