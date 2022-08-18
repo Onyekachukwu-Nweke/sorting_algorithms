@@ -39,4 +39,7 @@ void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void sort_deck(deck_node_t **deck);
 
+void recall_sort(int *array, size_t size, int low, int high);
+size_t partition(int *array, size_t size, int low, int high);
+void swap_num(int *array, size_t size, int a, int b);
 #endif
